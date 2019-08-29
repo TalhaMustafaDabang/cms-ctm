@@ -1,0 +1,31 @@
+type statusType = "Draft" | "New" | "Member Feedback" | "WIP" | "Resolved" | "Closed" | "Monitoring";
+type severityType = "High" | "Medium" | "Low" | "FYI";
+type classType = "Domain" | "URL";
+export interface iIncident {
+  _id?: string,
+  member?: string,
+  brands?: string,
+  incidentParentId?: string,
+  type?: string,
+  incidentClass?: classType,
+  incidentSubject?: string,
+  preAuthorised?: boolean,
+  authorizationEvidence?: string,
+  severity?: severityType,
+  status?: statusType,
+  snapshot?: string,
+  creationDate?: Date,
+  lastUpdateDate?: Date,
+  fraudCasting?: boolean,
+  baiting?: boolean,
+  suggestedCOA?: string,
+  actualCOA?: string,
+  feedbackProvidedByMember?: boolean,
+  memberRequestedCourseOfAction?: boolean,
+  memberFeedbackProvidedBy?: string,
+  memberFeedbackProvidedAt?: Date,
+  memberFeedbackRemarks?: string,
+  reappearanceCount?: number,
+  remarks?: string,
+  description?: string,
+}

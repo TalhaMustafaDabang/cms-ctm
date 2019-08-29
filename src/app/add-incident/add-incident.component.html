@@ -1,0 +1,161 @@
+<div class="mainBox">
+  <form #f="ngForm" (ngSubmit)="submitIncident(f.value)">
+    <div class="form-group">
+      <label for="">Member</label>
+      <input ngModel name="member" type="text" class="form-control" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="">Brands</label>
+      <input ngModel name="brands" type="text" class="form-control" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="">Incident Parent Id</label>
+      <input ngModel name="incidentParentId" type="text" class="form-control" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="exampleSelect1">Type Of Incident</label>
+      <select ngModel name="type" class="form-control">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+    <div class="form-group">
+      Upload Incidence Image
+      <div class="input-group mb-3">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="inputGroupFile02">
+            <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+          </div>
+          <div class="input-group-append">
+            <span class="input-group-text" id="">Upload</span>
+          </div>
+        </div>
+      </div>
+
+    <div class="form-group">
+      <label>Incident Class</label>
+      <select ngModel name="incidentClass" class="form-control">
+        <option>Domain</option>
+        <option>URL</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="">Incident Subject</label>
+      <input ngModel name="incidentSubject" type="text" class="form-control" placeholder="">
+    </div>
+
+    <fieldset class="form-group">
+        <!-- <legend>Pre Authorized</legend> -->
+        Pre Authorized
+        <div class="form-check">
+          <label class="form-check-label">
+            <input ngModel type="radio" class="form-check-input" name="preAuthorized"  value="true">
+            Yes
+          </label>
+        </div>
+        <div class="form-check">
+        <label class="form-check-label">
+            <input ngModel type="radio" class="form-check-input" name="preAuthorized" value="false">
+            No
+          </label>
+        </div>
+      </fieldset>
+
+    <div class="form-group">
+      <label for="">Authorization Evidence</label>
+      <input ngModel name="authorizationEvidence" type="text" class="form-control" placeholder="">
+    </div>
+    <div class="form-group">
+      <label>Severity</label>
+      <select ngModel name="severity" class="form-control">
+        <option>High</option>
+        <option>Medium</option>
+        <option>Low</option>
+        <option>FYI</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Status</label>
+      <select ngModel name="status" class="form-control">
+        <option>Draft</option>
+        <option>New</option>
+        <option>Member Feedback</option>
+        <option>WIP</option>
+        <option>Resolved</option>
+        <option>Closed</option>
+        <option>Monitering</option>
+      </select>
+    </div>
+
+    <fieldset class="form-group">
+        <!-- <legend>Fraud Casting</!-->
+        Fraud Casting
+        <div class="form-check">
+          <label class="form-check-label">
+            <input ngModel type="radio" class="form-check-input" name="fraudCasting"  value="true">
+            Yes
+          </label>
+        </div>
+        <div class="form-check">
+        <label class="form-check-label">
+            <input ngModel type="radio" class="form-check-input" name="fraudCasting" value="false">
+            No
+          </label>
+        </div>
+      </fieldset>
+
+
+
+      <fieldset class="form-group">
+          <!-- <legend>Baiting</legend> -->
+          Baiting
+          <div class="form-check">
+            <label class="form-check-label">
+              <input ngModel type="radio" class="form-check-input" name="baiting"  value="true">
+              Yes
+            </label>
+          </div>
+          <div class="form-check">
+          <label class="form-check-label">
+              <input ngModel type="radio" class="form-check-input" name="baiting" value="false">
+              No
+            </label>
+          </div>
+        </fieldset>
+
+
+    <div class="form-group">
+      <label for="">Suggested COA</label>
+      <input ngModel name="suggestedCOA" type="text" class="form-control" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="">Actual COA</label>
+      <input ngModel name="actualCOA" type="text" class="form-control" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="">Feedback Provided By Admin</label>
+      <input ngModel name="feedbackProvidedByMember" type="text" class="form-control" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="">Member Requested Course Of Action</label>
+      <input ngModel name="memberRequestedCourseOfAction" type="text" class="form-control" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="">Member Feedback Remarks</label>
+      <input ngModel name="memberFeedbackRemarks" type="text" class="form-control" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="">Remarks</label>
+      <textarea ngModel name="remarks" class="form-control" id="exampleTextarea" rows="3"></textarea>
+    </div>
+
+
+
+<button type="submit" class="btn btn-lg btn-success">Add</button>
+
+
+  </form>
+</div>

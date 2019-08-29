@@ -1,0 +1,29 @@
+    <!-- navbar start -->
+    <div style="z-index: 1">
+
+      <div class="responsive-bar">
+          <div class="logo">
+              <h1 (click)="toogleNav()">=</h1>
+          </div>
+          <div (click)="toogleMenu()" class="menu">
+              <h4>Menu</h4>
+          </div>
+      </div>
+
+      <nav class="navStyle">
+          <div class="logo">
+              <h1 (click)="toogleNav()">=</h1>
+          </div>
+          <ul [style.display]="showUl ? 'block' : 'none'">
+              <!-- <li><a [routerLink]="['/dashboard']" routerLinkActive="router-link-active"  class="active">INCIDENT MANAGEMENT</a></li>
+              <li><a [routerLink]="['/footprint']">CYBER FOOTPRINT</a></li>
+              <li><a [routerLink]="['/domain-info']">DOMAIN INF</a></li>
+              <li><a [routerLink]="['/inspection']" >CUBER ASSETS INSPECION </a></li>
+              <li><a [routerLink]="['/domain-alert']">DOMAIN REG ALERT</a></li>
+              <li><a [routerLink]="['/analysis-investigation']">ANALYSIS & INVESTIGATION</a></li>
+              <li><a [routerLink]="['/situational-awareness']">SITUATIONAL AWARENESS</a></li>
+              <li><a [routerLink]="['/reports']">REPORTS</a></li> -->
+          </ul>
+      </nav>
+  </div>
+  <!-- navbar end -->

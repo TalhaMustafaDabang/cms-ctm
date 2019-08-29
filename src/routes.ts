@@ -1,12 +1,11 @@
-import { HomeComponent } from './home/home.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 // import { HomeComponent } from './';
-import { AddIncidentComponent } from './add-incident/add-incident.component';
+import { AddIncidentComponent } from './app/add-incident/add-incident.component';
 // import { Name3Component } from './';
 // import { Name4Component } from './';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './app/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   // { path: '', component: HomeComponent },
@@ -25,4 +24,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
-

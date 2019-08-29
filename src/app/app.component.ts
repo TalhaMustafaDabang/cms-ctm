@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cms';
+  navState: boolean = false;
+  constructor() {
+    window.addEventListener('toogleNav', () => {
+      this.navState = !this.navState;
+
+    });
+
+  }
+
+  closeNav() {
+    this.navState = !this.navState;
+  }
+
 }

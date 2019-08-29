@@ -1,0 +1,31 @@
+// Member
+// Brands
+// Incident Parent Id
+// Type
+// Incident Class
+// Incident Subject
+// Pre Authorised
+// Authorization Evidence
+// Severity
+// Status
+// Snapshot
+// Creation Date
+// Last Update Date
+// Fraud Casting
+// Baiting
+// Sugg  cvcested COA
+// Actual COA
+// Feedback provided by Member
+// Member requested Course Of Action
+// Member feedback provided by
+// Member feedback provided at
+// Member feedback remarks
+// Reappearance Count
+// Remarks
+// Description
+
+
+// Attack or TTP
+// Actors
+// Media or Vanity
+// Indicators
