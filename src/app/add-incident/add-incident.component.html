@@ -15,12 +15,37 @@
     <div class="form-group">
       <label for="exampleSelect1">Type Of Incident</label>
       <select ngModel name="type" class="form-control">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
+        <option value="Phishing">Phishing</option>
+        <option value="Pharming">Pharming</option>
+        <option value="Cybersquatting">Cybersquatting</option>
+        <option value="Social Media Fraud">Social Media Fraud</option>
+        <option value="Suspicious Mobile App">Suspicious Mobile App</option>
+        <option value="Email Fraud">Email Fraud</option>
+        <option value="Data Leakage">Data Leakage</option>
+        <option value="Job Scam">Job Scam</option>
+        <option value="Misc. TM Infringement">Misc. TM Infringement</option>
+        <option value="SE Vulnerability">SE Vulnerability</option>
+        <option value="Money Mule Account">Money Mule Account</option>
+        <option value="Digital Content Theft">Digital Content Theft</option>
+        <option value="Cyber Evil-Twin Site">Cyber Evil-Twin Site</option>
+        <option value="Malware">Malware</option>
+        <option value="Others">Others</option>
+        <option value="TRAP10">TRAP10</option>
+        <option value="Spam">Spam</option>
+        <option value="Non-Incident">Non-Incident</option>
+        <option value="Malicious Domain">Malicious Domain</option>
+        <option value="Malicious IP">Malicious IP</option>
+        <option value="Deep Web">Deep Web</option>
+        <option value="Auto-Generated Page">Auto-Generated Page</option>
+        <option value="Vishing">Vishing</option>
+        <option value="Inaccurate Content">Inaccurate Content</option>
+        <option value="Exposed Misconfiguration">Exposed Misconfiguration</option>
+        <option value="Doorway Page">Doorway Page</option>
+        <option value="SMShing">SMShing</option>
+        <option value="APT">APT</option>
+        <option value="Ransomware">Ransomware</option>
+        <option value="Brand Harassment">Brand harassment</option>
+          </select>
     </div>
     <div class="form-group">
       Upload Incidence Image
@@ -52,13 +77,13 @@
         Pre Authorized
         <div class="form-check">
           <label class="form-check-label">
-            <input ngModel type="radio" class="form-check-input" name="preAuthorized"  value="true">
+            <input ngModel type="radio" class="form-check-input" name="preAuthorized" value="true">
             Yes
           </label>
         </div>
         <div class="form-check">
         <label class="form-check-label">
-            <input ngModel type="radio" class="form-check-input" name="preAuthorized" value="false">
+            <input ngModel checked="checked" type="radio" class="form-check-input" name="preAuthorized" value="false">
             No
           </label>
         </div>
@@ -101,7 +126,7 @@
         </div>
         <div class="form-check">
         <label class="form-check-label">
-            <input ngModel type="radio" class="form-check-input" name="fraudCasting" value="false">
+            <input ngModel checked="checked" type="radio" class="form-check-input" name="fraudCasting" value="false">
             No
           </label>
         </div>
@@ -120,7 +145,7 @@
           </div>
           <div class="form-check">
           <label class="form-check-label">
-              <input ngModel type="radio" class="form-check-input" name="baiting" value="false">
+              <input ngModel checked="checked" type="radio" class="form-check-input" name="baiting" value="false">
               No
             </label>
           </div>

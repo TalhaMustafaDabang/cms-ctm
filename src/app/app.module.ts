@@ -1,3 +1,4 @@
+import { DataService } from './services/data.service';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -8,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AddIncidentComponent } from './add-incident/add-incident.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
+import { HttpClientModule } from '@angular/common/http';
 const routes : Routes = [
   {
     path : '',
@@ -28,12 +30,14 @@ const routes : Routes = [
   ],
   imports: [
     // RouterModule,
+    // DataService,
     FormsModule,
     BrowserModule,
     RouterModule.forRoot(routes),
+    HttpClientModule,
     // AppRoutingModule,
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

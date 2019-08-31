@@ -1,3 +1,4 @@
+import { DataService } from './../services/data.service';
 import { iIncident } from './../interfaces/iIncident';
 import { Component, OnInit } from '@angular/core';
 
@@ -7,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-incident.component.css']
 })
 export class AddIncidentComponent implements OnInit {
-  incident: iIncident ={};
-  constructor() { }
+  incident: iIncident = {};
+  constructor(private ds: DataService) { }
 
   ngOnInit() {
   }
@@ -29,16 +30,24 @@ export class AddIncidentComponent implements OnInit {
     this.incident.severity = value.severity;
     this.incident.reappearanceCount = 0;
     this.incident.preAuthorised = value.preAuthorised;
-    this.incident.memberRequestedCourseOfAction =<boolean>value.memberRequestedCourseOfAction;
+    this.incident.memberRequestedCourseOfAction = <boolean>value.memberRequestedCourseOfAction;
     this.incident.incidentSubject = value.incidentSubject;
     this.incident.remarks = value.remarks;
-    if(value.memberFeedbackRemarks!=""){
-      this.incident.memberFeedbackRemarks=value.memberFeedbackRemarks;
+    if (value.memberFeedbackRemarks != "") {
+      this.incident.memberFeedbackRemarks = value.memberFeedbackRemarks;
       this.incident.feedbackProvidedByMember = <boolean>value.feedbackProvidedByMember;
       this.incident.memberFeedbackProvidedBy = "user";
       this.incident.memberFeedbackProvidedAt = new Date();
     }
-    console.log(this.incident);
+    this.ds.addIncident(this.incident).then((e) => {
+      console.log(e)
+      // this.ds.getAllIncidents().then(e => {
+      // console.log(e)
+      // })
+    })
+      .catch(e => {
+        console.log("err", e)
+      })
   }
 
 }
