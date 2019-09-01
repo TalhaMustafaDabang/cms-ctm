@@ -10,6 +10,7 @@ import { AddIncidentComponent } from './add-incident/add-incident.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 const routes : Routes = [
   {
     path : '',
@@ -31,6 +32,7 @@ const routes : Routes = [
   imports: [
     // RouterModule,
     // DataService,
+    SweetAlert2Module.forRoot(),
     FormsModule,
     BrowserModule,
     RouterModule.forRoot(routes),

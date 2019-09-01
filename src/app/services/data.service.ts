@@ -19,13 +19,13 @@ export class DataService {
         'Access-Control-Allow-Origin': "*"
       })
     };
-    // return this.http.post("https://demo-contact-app-talha.herokuapp.com/incident", incidet, { headers: httpOptions.headers }).toPromise()
-    return this.http.post("http://localhost:3000/incident", incident, { headers: httpOptions.headers }).toPromise()
+    return this.http.post("https://demo-contact-app-talha.herokuapp.com/incident", incident, { headers: httpOptions.headers }).toPromise()
+    // return this.http.post("http://localhost:3000/incident", incident, { headers: httpOptions.headers }).toPromise()
   }
 
   getAllIncidents(): Promise<any> {
-    // return this.http.get("https://demo-contact-app-talha.herokuapp.com/incident").toPromise()
-    return this.http.get("http://localhost:3000/incident").toPromise()
+    return this.http.get("https://demo-contact-app-talha.herokuapp.com/incident").toPromise()
+    // return this.http.get("http://localhost:3000/incident").toPromise()
 
   }
 }

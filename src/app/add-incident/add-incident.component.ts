@@ -1,7 +1,7 @@
 import { DataService } from './../services/data.service';
 import { iIncident } from './../interfaces/iIncident';
 import { Component, OnInit } from '@angular/core';
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-add-incident',
   templateUrl: './add-incident.component.html',
@@ -41,11 +41,22 @@ export class AddIncidentComponent implements OnInit {
     }
     this.ds.addIncident(this.incident).then((e) => {
       console.log(e)
+      Swal.fire(
+        'Incident Added',
+        // 'You clicked the button!',
+        'success'
+      )
       // this.ds.getAllIncidents().then(e => {
       // console.log(e)
       // })
     })
       .catch(e => {
+        Swal.fire({
+          type: 'error',
+          title: 'Oops...',
+          text: 'Something went wrong!',
+          footer: `${JSON.stringify(e)}`
+        })
         console.log("err", e)
       })
   }
