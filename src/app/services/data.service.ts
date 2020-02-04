@@ -19,7 +19,7 @@ export class DataService {
         'Access-Control-Allow-Origin': "*"
       })
     };
-    return this.http.post("https://demo-contact-app-talha.herokuapp.com/incident", incident, { headers: httpOptions.headers }).toPromise()
+    return this.http.post("https://demo-contact-app-talha.herokuapp.com/incident", incident, { headers: httpOptions.headers }).toPromise();
     // return this.http.post("http://localhost:3000/incident", incident, { headers: httpOptions.headers }).toPromise()
   }
 

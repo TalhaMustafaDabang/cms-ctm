@@ -1,0 +1,52 @@
+<div class="mainBox">
+  <form #f="ngForm" (ngSubmit)="addCustomer(f.value)">
+    <div class="form-group">
+      <label for="CompanyBrandName">Company Brand Name</label>
+      <input ngModel name="CompanyBrandName" type="text" class="form-control" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="companyOfficialSocialMediaLink">Company Official Social Media Link</label>
+      <input ngModel name="companyOfficialSocialMediaLink" type="text" class="form-control" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="companyYoutubeLink">Company Youtube Link</label>
+      <input ngModel name="companyYoutubeLink" type="text" class="form-control" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="companyFacebookLink">Company Facebook Link</label>
+      <input ngModel name="companyFacebookLink" type="text" class="form-control" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="companyTwitterLink">Company Twitter Link</label>
+      <input ngModel name="companyTwitterLink" type="text" class="form-control" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="companyLinkedinLink">Company LinkedIn Link</label>
+      <input ngModel name="companyLinkedinLink" type="text" class="form-control" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="mobileAppLink">Space Saperated Mobile App Links</label>
+      <input ngModel name="mobileAppLink" type="text" class="form-control" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="domainNames">Coma Saperated Domain Names</label>
+      <input ngModel name="domainNames" type="text" class="form-control" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="ipRanges">Ip Ranges</label>
+      <input ngModel name="ipRanges" type="text" class="form-control" placeholder="">
+    </div>
+    
+    <div class="form-group">
+      <label for="executiveProfileLink">Executive Profile Link</label>
+      <input ngModel name="text" type="text" class="form-control" placeholder="">
+    </div>
+
+
+<button type="submit" class="btn btn-lg btn-success">Add</button>
+
+
+  </form>
+</div>
+
+<!-- <div style="position: absolute; text-align: center" class="spinner-border"></!--> -->
