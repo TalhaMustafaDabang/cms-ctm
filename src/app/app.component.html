@@ -1,51 +1,34 @@
 <div [style.width]="navState ? '250px' : '0px'" id="mySidenav" class="sidenav">
   <div class="logoBox">
 
-      <h1 (click)="closeNav()">=</h1>
-      <img src="../assets/logos/logo.png" alt="">
-    <!-- <a (click)="closeNav()">&times;</a> -->
+      <!-- <h1 (click)="closeNav()">=</h1>
+      <img src="../assets/logos/logo.png" alt=""> -->
 
   </div>
   <ul>
     <li>
-      <a [routerLink]="['/add-incident']" class="active">
+      <a [routerLink]="['/add-incident']" class="">
         ADD INCIDENT
       </a>
     </li>
     <li>
-      <a [routerLink]="['/view-customers']" class="active">
-        View Customers
+      <a [routerLink]="['/view-customers']" class="">
+        VIEW CUSTOMERS
       </a>
     </li>
     <li>
-      <a [routerLink]="['/add-customer']" class="active">
+      <a [routerLink]="['/add-customer']" class="">
         ADD CUSTOMER
       </a>
     </li>
-    <!-- <li><a [routerLink]="['/footprint']">
-        CYBER FOOTPRINT
-      </a></li>
-    <li><a [routerLink]="['/domain-info']">
-        DOMAIN INF
-      </a></li>
-    <li><a [routerLink]="['/inspection']">
-        CUBER ASSETS INSPECION
-      </a></li>
-    <li><a [routerLink]="['/domain-alert']">
-        DOMAIN REG ALERT
-      </a></li>
-    <li><a [routerLink]="['/analysis-investigation']">
-        ANALYSIS & INVESTIGATION
-      </a></li>
-    <li><a [routerLink]="['/situational-awareness']">
-        SITUATIONAL AWARENESS
-      </a></li>
-    <li><a [routerLink]="['/reports']">
-        REPORTS
-      </a></li> -->
-  </ul>
+    
+    <li>
+        <a [routerLink]="['/add-company-cyber-footprint']" class="">
+          ADD CYBER FOOTPRINT
+        </a>
+      </li>
+</ul>    
 </div>
-
 
 <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 <div [style.marginLeft]="navState ? '250px' : '0px'" id="main">

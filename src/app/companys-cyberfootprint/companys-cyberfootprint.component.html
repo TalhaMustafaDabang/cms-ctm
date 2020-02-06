@@ -1,5 +1,14 @@
 <div class="mainBox">
   <form #f="ngForm" (ngSubmit)="addCustomer(f.value)">
+    
+    <div class="form-group">
+      <label for="selectCompany">Select Company</label>
+      <select ngModel name="selectCompany" class="form-control">
+        <option *ngFor="let company of subscribedCompanies" [value]="company.id">{{company.companyName}}</option>
+      </select>
+    </div>
+    
+
     <div class="form-group">
       <label for="CompanyBrandName">Company Brand Name</label>
       <input ngModel name="CompanyBrandName" type="text" class="form-control" placeholder="">

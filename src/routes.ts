@@ -1,22 +1,15 @@
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-
-// import { HomeComponent } from './';
 import { AddIncidentComponent } from './app/add-incident/add-incident.component';
-// import { Name3Component } from './';
-// import { Name4Component } from './';
 import { PageNotFoundComponent } from './app/page-not-found/page-not-found.component';
+import { CompanysCyberfootprintComponent } from './app/companys-cyberfootprint/companys-cyberfootprint.component';
+import { AddCustomerComponent } from './app/add-customer/add-customer.component';
 
 const routes: Routes = [
-  // { path: '', component: HomeComponent },
   { path: 'add-incident', component: AddIncidentComponent },
+  { path: 'add-company-cyber-footprint', component: CompanysCyberfootprintComponent },
+  { path: 'add-customer', component: AddCustomerComponent },
   { path: '**', component: PageNotFoundComponent },
-
-  //{ path: 'path/:routeParam', component: MyComponent },
-  //{ path: 'staticPath', component: ... },
-  //{ path: '**', component: ... },
-  //{ path: 'oldPath', redirectTo: '/staticPath' },
-  //{ path: ..., component: ..., data: { message: 'Custom' }
 ];
 
 @NgModule({

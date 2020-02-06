@@ -16,6 +16,8 @@ import { ViewAllCustomerComponent } from './view-all-customer/view-all-customer.
 import { CustomerComponent } from './view-all-customer/customer/customer.component';
 import { AuthService } from './services/auth.service';
 import { CompanysCyberfootprintComponent } from './companys-cyberfootprint/companys-cyberfootprint.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTableModule} from '@angular/material/table';
 const routes : Routes = [
   {
     path : '',
@@ -28,13 +30,8 @@ const routes : Routes = [
   {
     path : 'view-customers',
     component: ViewAllCustomerComponent,
-    // children:[
-    //   {
-    //     path : '/customer/:id',
-    //     component: CustomerComponent,
-    //   },
-    // ]
   },
+  { path: 'add-company-cyber-footprint', component: CompanysCyberfootprintComponent },
   { path: 'add-incident', component: AddIncidentComponent },
   { path: '**', component: PageNotFoundComponent },
 
@@ -59,7 +56,9 @@ const routes : Routes = [
     BrowserModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
+    BrowserAnimationsModule,
     // AppRoutingModule,
+    MatTableModule
   ],
   providers: [DataService,AuthService],
   bootstrap: [AppComponent]

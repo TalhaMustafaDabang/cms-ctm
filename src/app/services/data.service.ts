@@ -10,6 +10,21 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
+  getAllCustomers():Promise<any>{
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': "*"
+      })
+    }
+    // return this.http.get("https://demo-contact-app-talha.herokuapp.com/registered-companies").toPromise()
+    return this.http.get("http://localhost:3000/company/getAll",{headers:httpOptions.headers}).toPromise();
+  }
+
+  // getAllCompanies():Promise<any>{
+  //   return this.http.get("http://localhost:3000/registered-companies").toPromise()
+
+  // }
 
   addIncident(incident: iIncident): Promise<any> {
     const httpOptions = {

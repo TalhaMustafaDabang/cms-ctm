@@ -16,8 +16,10 @@ export class AuthService {
         'Access-Control-Allow-Origin': "*"
       })
     }
-    return this.http.post("http://localhost:3000/users/signup", customer, { headers: httpOptions.headers }).toPromise();
+    return this.http.post("http://localhost:3000/company/signup", customer, { headers: httpOptions.headers }).toPromise();
   }
+
+  
 
   // getCustomers()
 }
